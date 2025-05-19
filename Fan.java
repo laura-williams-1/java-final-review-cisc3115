@@ -15,4 +15,18 @@ public class Fan {
     Fan(){
         this(0,false,0.00,"Unknown");
     }
+
+    public int getSpeed(){
+        return this.speed;
+    }
+    public double getRadius(){
+        return this.radius;
+    }
+    public String getColor(){
+        return this.color;
+    }
+    public boolean isOn(){
+        return on;
+    }
+
 }
