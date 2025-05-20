@@ -19,5 +19,10 @@ public class CeilingFan extends Fan{
         // super.equals already compares the instance fields from fan to the other ceiling fan
     }
 
+    @Override
+    public String toString(){
+        return super.toString() + "numBulbs: " + numBulbs;
+    }
+
 
 }
