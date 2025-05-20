@@ -29,4 +29,40 @@ public class Fan {
         return on;
     }
 
+    public void setSpeed(int speed){
+        this.speed = speed;
+    }
+
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+    void setColor(String color){
+        this.color = color;
+    }
+    public void turnOn(){
+        this.on = true;
+    }
+    public void turnOff(){
+        this.on = false;
+    }
+    @Override
+    public boolean equals(Fan f) {
+        return this.speed == f.speed && this.on == f.on &&
+                this.radius == f.radius && this.color.equals(f.color);
+    }
+    @Override
+    public String toString() {
+        return "Fan[speed=" + speed + ", on=" + on + ", radius=" + radius + ", color=" + color + "]";
+    }
+
+    public static Fan read(java.util.Scanner sc) {
+        int speed = sc.nextInt();
+        boolean on = sc.nextBoolean();
+        double radius = sc.nextDouble();
+        String color = sc.next();
+        return new Fan(speed, on, radius, color);
+    }
+
+
+
 }
